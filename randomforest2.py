@@ -29,7 +29,7 @@ data = data[:, [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 22, 30]]
 # y = dataset.iloc[ : ,-1:].values
 X, y = data[:, :-1], data[:, -1]
 
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state=40)
+x_train, x_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state=40)
 
 # params = [{'n_estimators':[100,300,500,700], 'max_features':['sqrt','log2'], 'criterion':['gini', 'entropy']}]
 params = {'n_estimators':[100], 'max_features':['sqrt'], 'criterion':['entropy']}
